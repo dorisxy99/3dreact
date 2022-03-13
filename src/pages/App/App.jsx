@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { getUser } from '../../utilities/users-service';
 import AuthPage from "../AuthPage/AuthPage";
 import Market from "../Market/Market";
-import Features from '../Features/Features';
+import Create from '../Create/Create';
 import NavBar from '../../components/NavBar/NavBar';
 // import Cards from '../../components/Cards/Cards';
 
@@ -21,7 +21,7 @@ export default function App() {
               <Route path="/" element={<Market />} />
               <Route path="/login" element={<AuthPage user={user} setUser={setUser} />} />
               { user? 
-                <Route path="/features" element={<Features />} />
+                <Route path="/create" element={<Create />} />
                 :null
               }
             </Routes>
